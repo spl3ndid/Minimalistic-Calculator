@@ -50,7 +50,6 @@ Once the calculator is open in your browser, you can interact with it using both
 Contributions are welcome! If you have suggestions or improvements, please feel free to open an issue or submit a pull request.
 
 ## Acknowledgements
-
-Inspired by the simplicity and efficiency of classic calculator designs.
+- Inspired by the simplicity and efficiency of classic calculator designs.
 ---
 
