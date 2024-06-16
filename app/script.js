@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleNumberClick(value) {
+        if (currentInput.replace('.', '').length >= 13) {
+            return; // Prevent input if it exceeds 13 digits (excluding the decimal point)
+        }
         if (operator && !secondValue) {
             currentInput = value;
             secondValue = value;
@@ -57,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 result = a / b;
                 break;
         }
-        updateDisplay(result);
-        firstValue = result;
+        updateDisplay(result.toString().slice(0, 14)); // Limit display to 13 digits
+        firstValue = result.toString().slice(0, 14); // Store only up to 13 digits
         secondValue = '';
         operator = '';
-        currentInput = result;
+        currentInput = result.toString().slice(0, 14); // Store only up to 13 digits
     }
 
     function handleBackspace() {
